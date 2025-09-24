@@ -1,13 +1,4 @@
-/*
-Sketch → (Enter) Overlay → Polaroid
-- Pattern full canvas (Motion01..05)
-- Enter: overlay (4 góc trắng + vòng tròn) đè lên pattern
-- Vào polaroid: pattern phía sau grayscale + phủ đen Multiply 50%
-- Polaroid animate scale từ to -> nhỏ
-- Enter trong polaroid: random lại ảnh bên trong (grid hoặc full cover) + caption + góc xoay
-- Caption random từ 10 từ, có # phía trước, font Phudu Medium
-- Hint "press enter" Worksans Regular, nhấp nháy, luôn hiện ở góc phải dưới
-*/
+
 
 let sprites = [];
 const NUM_SPRITES = 28;
@@ -23,7 +14,6 @@ const RESET_TIME = 60 * 12; // ~10s
 let ENDED = false;
 const TARGET_CELL_PX = 96;
 
-/* buffer để grayscale khi ở polaroid */
 let patternG;
 
 /* ===== OVERLAY ===== */
@@ -111,7 +101,6 @@ function draw() {
     drawPolaroidWithIntro();
   }
 
-  // hint luôn hiển thị ở góc phải dưới
   drawHint();
 }
 
